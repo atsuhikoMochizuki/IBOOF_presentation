@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+    <persistence-unit name="IBOOF-JPA" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>fr.diginamic.entities.Categorie</class>
+        <class>fr.diginamic.entities.Ingredient</class>
+        <class>fr.diginamic.entities.Nutriscore</class>
+        <class>fr.diginamic.entities.Additif</class>
+        <class>fr.diginamic.entities.Allergene</class>
+        <class>fr.diginamic.entities.Marque</class>
+        <class>fr.diginamic.entities.Produit</class>
+        <properties>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/IBOOF"/>
+            <property name="jakarta.persistence.jdbc.user" value="root"/>
+            <property name="jakarta.persistence.jdbc.password" value="root"/>
+
+            <!--            <property name="jakarta.persistence.jdbc.url"-->
+            <!--                      value="jdbc:mysql://btbj8syzm2n3viiudu8b-mysql.services.clever-cloud.com:3306/btbj8syzm2n3viiudu8b"/>-->
+            <!--            <property name="jakarta.persistence.jdbc.user" value="ua1hclbyw8smozhk"/>-->
+            <!--            <property name="jakarta.persistence.jdbc.password" value="NFxnGRorGuccpKDhVR3F"/>-->
+
+            <property name="hibernate.archive.autodetection" value=""/>
+            <!-- Activation de la génération des tables manquantes uniquement -->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <!-- Drop and create à chaque redémarrage -->
+            <property name="jakarta.persistence.schema-generation.database.action"
+                      value="drop-and-create"/>
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="jakarta.persistence.sharedCache.mode" value="ENABLE_SELECTIVE"/>
+            <property name="hibernate.cache.use_second_level_cache" value="true"/>
+            <property name="hibernate.cache.region.factory_class" value="jcache"/>
+            <property name="hibernate.cache.provider_class"
+                      value="org.hibernate.cache.jcache.internal.JCacheRegionFactory"/>
+
+        </properties>
+    </persistence-unit>
+</persistence>
