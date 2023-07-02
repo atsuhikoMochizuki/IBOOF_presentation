@@ -9,10 +9,10 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class Ihm extends JFrame {
+public class Ihm_GUI extends JFrame {
     public static final String IBOOF_LOGO = "./design/logo-no-background.png";
 
-    public Ihm() throws IOException {
+    public Ihm_GUI() throws IOException {
         super("IBOOF - Immersive Best open FOOd Facts Advisor");
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setSize(800, 600);
@@ -60,9 +60,9 @@ public class Ihm extends JFrame {
         contentPane.add(textContent);
     }
 
-    public static Ihm display() throws UnsupportedLookAndFeelException, IOException {
+    public static Ihm_GUI display() throws UnsupportedLookAndFeelException, IOException {
         UIManager.setLookAndFeel(new NimbusLookAndFeel());
-        Ihm ihm = new Ihm();
+        Ihm_GUI ihm = new Ihm_GUI();
         ihm.setVisible(true);
         return ihm;
     }

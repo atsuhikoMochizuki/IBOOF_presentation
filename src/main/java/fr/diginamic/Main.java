@@ -1,15 +1,9 @@
 package fr.diginamic;
 
 
-import fr.diginamic.ihm.Ihm;
 import fr.diginamic.mochizukiTools.Params;
 import fr.diginamic.mochizukiTools.Utils;
 import fr.diginamic.service.IboofManager;
-import fr.diginamic.service.Logging;
-import fr.diginamic.service.Cleaner;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.Persistence;
 
 import javax.swing.*;
 import java.io.IOException;
