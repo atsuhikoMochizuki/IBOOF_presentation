@@ -11,4 +11,7 @@ public class IboofManagerTest {
         I_IboofManager iboofManager = new IboofManager(fileTestPath);
         iboofManager.mapCsvFileToDatabase();
     }
+
+
+
 }
