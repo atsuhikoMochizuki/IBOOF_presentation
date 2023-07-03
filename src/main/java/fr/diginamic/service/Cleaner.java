@@ -1,5 +1,6 @@
 package fr.diginamic.service;
 
+import fr.diginamic.mochizukiTools.Logging;
 import fr.diginamic.mochizukiTools.Utils;
 import org.slf4j.Logger;
 

@@ -1,6 +1,7 @@
 package fr.diginamic.service;
 
 import fr.diginamic.entities.*;
+import fr.diginamic.mochizukiTools.Logging;
 import fr.diginamic.mochizukiTools.Utils;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
