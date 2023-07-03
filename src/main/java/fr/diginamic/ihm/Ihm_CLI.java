@@ -1,8 +1,8 @@
 package fr.diginamic.ihm;
 
-import fr.diginamic.service.I_IboofManager;
-import fr.diginamic.mochizukiTools.Utils;
-import fr.diginamic.service.IboofManager;
+import fr.diginamic.services.subSystems.I_IboofManager;
+import fr.diginamic.utilitaires.mochizukiTools.Utils;
+import fr.diginamic.services.subSystems.Services_IboofManager;
 
 import java.util.ResourceBundle;
 import java.util.Scanner;
@@ -108,7 +108,7 @@ public class Ihm_CLI {
 
                 case "7" -> {
                     String fileTestPath = ResourceBundle.getBundle("project").getString("project.TEST_csvfile");
-                    I_IboofManager iboofManager = new IboofManager(fileTestPath);
+                    I_IboofManager iboofManager = new Services_IboofManager(fileTestPath);
                     iboofManager.mapCsvFileToDatabase();
                 }
 
