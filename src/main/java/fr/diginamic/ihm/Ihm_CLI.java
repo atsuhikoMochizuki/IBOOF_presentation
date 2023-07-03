@@ -8,7 +8,7 @@ import java.util.ResourceBundle;
 import java.util.Scanner;
 
 public class Ihm_CLI {
-    public static void main() {
+    public static void display() {
         Utils.clearConsole();   //Nota : clearConsole n'a pas la possibilité de fonctionner dans un IDE
         String choix1, choix2;
         Scanner scanner = new Scanner(System.in);
