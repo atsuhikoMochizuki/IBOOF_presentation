@@ -17,10 +17,10 @@
             <property name="jakarta.persistence.jdbc.user" value="root"/>
             <property name="jakarta.persistence.jdbc.password" value="root"/>
 
-            <!--            <property name="jakarta.persistence.jdbc.url"-->
-            <!--                      value="jdbc:mysql://btbj8syzm2n3viiudu8b-mysql.services.clever-cloud.com:3306/btbj8syzm2n3viiudu8b"/>-->
-            <!--            <property name="jakarta.persistence.jdbc.user" value="ua1hclbyw8smozhk"/>-->
-            <!--            <property name="jakarta.persistence.jdbc.password" value="NFxnGRorGuccpKDhVR3F"/>-->
+<!--                        <property name="jakarta.persistence.jdbc.url"-->
+<!--                                  value="jdbc:mysql://btbj8syzm2n3viiudu8b-mysql.services.clever-cloud.com:3306/btbj8syzm2n3viiudu8b"/>-->
+<!--                        <property name="jakarta.persistence.jdbc.user" value="ua1hclbyw8smozhk"/>-->
+<!--                        <property name="jakarta.persistence.jdbc.password" value="NFxnGRorGuccpKDhVR3F"/>-->
 
             <property name="hibernate.archive.autodetection" value=""/>
             <!-- Activation de la génération des tables manquantes uniquement -->
