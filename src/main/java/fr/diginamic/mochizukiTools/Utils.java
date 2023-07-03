@@ -1,5 +1,7 @@
 package fr.diginamic.mochizukiTools;
 
+import java.util.Scanner;
+
 public class Utils {
 
     public static class Colors {
@@ -81,5 +83,18 @@ public class Utils {
         } catch (InterruptedException ex) {
             Thread.currentThread().interrupt();
         }
+    }
+
+    public static void pressEnterKeyToContinue()
+    {
+        System.out.println("Appuyez sur la touche ENTREE pour effectuer un nouveau choix...");
+        try
+        {
+            System.in.read();
+            Scanner scanner= null;
+            scanner.nextLine();
+        }
+        catch(Exception e)
+        {}
     }
 }

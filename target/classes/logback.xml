@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <!-- redirection des logs vers la sortie Console Standard -->
-    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender" additivity="false">
-        <encoder>
-            <pattern>%msg%n</pattern>
-        </encoder>
-    </appender>
+<!--    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender" additivity="false">-->
+<!--        <encoder>-->
+<!--            <pattern>%msg%n</pattern>-->
+<!--        </encoder>-->
+<!--    </appender>-->
     <appender name="FILE" class="ch.qos.logback.core.FileAppender" >
         <file>app.log</file>
         <append>true</append>

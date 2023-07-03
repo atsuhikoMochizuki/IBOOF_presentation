@@ -1,6 +1,8 @@
 package fr.diginamic.service;
 
-import fr.diginamic.entities.*;
+import fr.diginamic.I_services_search;
+import fr.diginamic.entities.Categorie;
+import fr.diginamic.entities.Marque;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
@@ -9,7 +11,7 @@ import jakarta.transaction.Transactional;
 
 import java.util.List;
 
-public class Services implements Iservices {
+public class Services_search implements I_services_search {
 
     private Marque marque;
     private Categorie categorie;
@@ -17,7 +19,7 @@ public class Services implements Iservices {
     String nomMarque;
     String nomCategorie;
 
-    public Services() {
+    public Services_search() {
     }
 
     @PersistenceContext
@@ -27,7 +29,7 @@ public class Services implements Iservices {
 
     @Transactional
     @Override
-    public void service1() {
+    public void search_BestProducts_byBrand() {
         List resultList = em.createNativeQuery(
                         "SELECT prod.nom_produit FROM Produit AS prod, " +
                                 "Marque AS marq, " +
@@ -38,12 +40,11 @@ public class Services implements Iservices {
                 .setParameter(1, getMarque())
                 .getResultList();
         resultList.forEach(System.out::println);
-
     }
 
     @Transactional
     @Override
-    public void service2() {
+    public void search_BestProducts_byCategory() {
         List resultList = em.createNativeQuery(
                         "SELECT prod.nom_produit FROM Produit AS prod, " +
                                 "Categorie AS categ, " +
@@ -58,7 +59,7 @@ public class Services implements Iservices {
 
     @Transactional
     @Override
-    public void service3() {
+    public void search_BestProducts_byBrandAndCategorie() {
         List resultList = em.createNativeQuery(
                         "SELECT prod.nom_produit FROM Produit AS prod, " +
                                 "Categorie AS categ, " +
@@ -72,12 +73,11 @@ public class Services implements Iservices {
                 .setParameter(2, getMarque())
                 .getResultList();
         resultList.forEach(System.out::println);
-
     }
 
     @Transactional
     @Override
-    public void service4() {
+    public void search_IngredientsNbrInProduct() {
         List resultList = em.createNativeQuery("SELECT ingt, COUNT(prod) FROM Produit AS prod" +
                 ", Ingredient AS ingt " +
                 "WHERE ingdt" +
@@ -89,7 +89,7 @@ public class Services implements Iservices {
 
     @Transactional
     @Override
-    public void service5() {
+    public void search_AllergensNbrInProduct() {
         List resultList = em.createNativeQuery("SELECT allerg, COUNT(prod) FROM Produit AS prod" +
                 ", Allergene AS allerg" +
                 "WHERE allerg" +
@@ -101,7 +101,7 @@ public class Services implements Iservices {
 
     @Transactional
     @Override
-    public void service6() {
+    public void search_AdditivesNbrInProduct() {
         List resultList = em.createNativeQuery("SELECT additi, COUNT(prod) FROM Produit AS prod" +
                 ", Additif AS additi" +
                 "WHERE additi" +
