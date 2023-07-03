@@ -1,6 +1,5 @@
 package fr.diginamic.service;
 
-import fr.diginamic.I_IboofManager;
 import fr.diginamic.mochizukiTools.Utils;
 
 import java.util.ArrayList;

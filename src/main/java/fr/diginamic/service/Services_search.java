@@ -1,6 +1,5 @@
 package fr.diginamic.service;
 
-import fr.diginamic.I_services_search;
 import fr.diginamic.entities.Categorie;
 import fr.diginamic.entities.Marque;
 import jakarta.persistence.EntityManager;

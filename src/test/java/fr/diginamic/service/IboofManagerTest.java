@@ -1,11 +1,8 @@
 package fr.diginamic.service;
 
-import fr.diginamic.I_IboofManager;
 import org.junit.Test;
 
 import java.util.ResourceBundle;
-
-import static org.junit.Assert.*;
 
 public class IboofManagerTest {
     @Test

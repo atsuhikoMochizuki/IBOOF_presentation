@@ -1,6 +1,6 @@
 package fr.diginamic.ihm;
 
-import fr.diginamic.I_IboofManager;
+import fr.diginamic.service.I_IboofManager;
 import fr.diginamic.mochizukiTools.Utils;
 import fr.diginamic.service.IboofManager;
 

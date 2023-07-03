@@ -1,4 +1,4 @@
-package fr.diginamic;
+package fr.diginamic.service;
 
 public interface I_services_search {
 
